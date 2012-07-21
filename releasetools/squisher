@@ -131,20 +131,19 @@ rm -rf $REPACK
 echo
 
 # Create a md5 checksum image of the repacked package
-(
 img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
-echo
-echo -e ${CL_INS}"Package complete: $OUTFILE" ${CL_RST}
-cat $img.md5sum
-echo
+
 # Build date and current time:
 cat $OUT/system/build.prop | grep ro.build.date=
 ls -l $OUTFILE
+cat $img.md5sum
 echo
-)
+echo ${CL_INS}"Package complete: $OUTFILE" ${CL_RST}
+echo
 
+# Addons packages, if any
 if [ -x $DEVICE_TOP/releasetools/addons ]; then
 	$DEVICE_TOP/releasetools/addons kernel
 #	$DEVICE_TOP/releasetools/addons bootmenu
