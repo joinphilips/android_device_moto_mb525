@@ -28,11 +28,11 @@ $(call inherit-product, vendor/motorola/jordan/jordan-vendor.mk)
 
 
 #PRODUCT_COPY_FILES += \
-##	out/target/product/jordan/recovery/root/sbin/tune2fs:system/bootmenu/recovery/sbin/tune2fs \
-#	out/target/product/jordan/recovery/root/sbin/e2fsck:system/bootmenu/recovery/sbin/e2fsck \
-#	out/target/product/jordan/recovery/root/sbin/tune2fs:system/bootmenu/recovery/sbin/tune2fs \
-#	out/target/product/jordan/recovery/root/sbin/mke2fs:system/bootmenu/recovery/sbin/mke2fs.bin \
-#	out/target/product/jordan/recovery/root/sbin/pigz:system/bootmenu/recovery/sbin/pigz \
+##	out/target/product/mb525/recovery/root/sbin/tune2fs:system/bootmenu/recovery/sbin/tune2fs \
+#	out/target/product/mb525/recovery/root/sbin/e2fsck:system/bootmenu/recovery/sbin/e2fsck \
+#	out/target/product/mb525/recovery/root/sbin/tune2fs:system/bootmenu/recovery/sbin/tune2fs \
+#	out/target/product/mb525/recovery/root/sbin/mke2fs:system/bootmenu/recovery/sbin/mke2fs.bin \
+#	out/target/product/mb525/recovery/root/sbin/pigz:system/bootmenu/recovery/sbin/pigz \
 
 # copy all vendor (motorola) kernel modules to system/lib/modules
 PRODUCT_COPY_FILES += $(shell test -d vendor/motorola/jordan/lib/modules &&  \

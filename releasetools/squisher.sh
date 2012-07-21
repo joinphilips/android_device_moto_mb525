@@ -2,7 +2,7 @@
 # It is the final build step (after OTA package)
 
 # set in squisher
-# DEVICE_OUT=$ANDROID_BUILD_TOP/out/target/product/jordan
+# DEVICE_OUT=$ANDROID_BUILD_TOP/out/target/product/mb525
 # DEVICE_TOP=$ANDROID_BUILD_TOP/device/moto/mb525
 # VENDOR_TOP=$ANDROID_BUILD_TOP/vendor/motorola/jordan
 
