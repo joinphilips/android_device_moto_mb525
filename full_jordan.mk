@@ -22,7 +22,7 @@
 #
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/motorola/jordan/jordan.mk)
+$(call inherit-product, device/moto/mb525/jordan.mk)
 $(call inherit-product, vendor/motorola/jordan/jordan-vendor.mk)
 # recovery tools
 
