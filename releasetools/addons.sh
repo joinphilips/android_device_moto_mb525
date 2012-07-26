@@ -3,7 +3,7 @@
 
 DEVICE_OUT=$ANDROID_BUILD_TOP/out/target/product/mb525
 # DEVICE_TOP=$ANDROID_BUILD_TOP/device/moto/mb525
-# VENDOR_TOP=$ANDROID_BUILD_TOP/vendor/motorola/jordan
+# VENDOR_TOP=$ANDROID_BUILD_TOP/vendor/motorola/jordan-common
 
 echo "addons.sh: $1"
 
@@ -40,7 +40,7 @@ if [ "$1" = "bootmenu" ]; then
 	cp $DEVICE_OUT/root/init $REPACK/ota/system/bootmenu/2nd-boot/
 	cp $DEVICE_OUT/root/*.rc $REPACK/ota/system/bootmenu/2nd-boot/
 
-	OUTFILE=$OUT/bootmenu.zip
+#	OUTFILE=$OUT/bootmenu.zip
 fi
 
 if [ "$1" = "twrp-recovery" ]; then
@@ -49,6 +49,7 @@ if [ "$1" = "twrp-recovery" ]; then
 	mkdir -p $REPACK/ota/system/bootmenu/script
 	cp -p $DEVICE_TOP/twrp/recovery_stable.sh $REPACK/ota/system/bootmenu/script/recovery_stable.sh
 	cp -r $DEVICE_TOP/twrp/recovery $REPACK/ota/system/bootmenu/
-	OUTFILE=$OUT/openrecovery-twrp-2.1.0-jordan-signed.zip
+
+#	OUTFILE=$OUT/openrecovery-twrp-2.1.0-jordan-signed.zip
 fi
 

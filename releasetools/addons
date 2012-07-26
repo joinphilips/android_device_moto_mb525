@@ -8,7 +8,8 @@ echo "-------------------------------------------------"
 
 DEVICE_OUT=$ANDROID_BUILD_TOP/out/target/product/mb525
 DEVICE_TOP=$ANDROID_BUILD_TOP/device/moto/mb525
-VENDOR_TOP=$ANDROID_BUILD_TOP/vendor/motorola/jordan
+VENDOR_TOP=$ANDROID_BUILD_TOP/vendor/motorola/jordan-common
+DEVICE_COMMON=$ANDROID_BUILD_TOP/device/moto/jordan-common
 
 OUT_TARGET_HOST=`uname -a | grep Darwin`
 if [ -z "$OUT_TARGET_HOST" ]
@@ -55,7 +56,7 @@ cd $REPACK/ota
 unzip -q $OTAPACKAGE "system/lib/modules/*" "META-INF/*"
 
 # Default package name for the new signed package
-OUTFILE=$OUT/addons.zip
+OUTFILE=$OUT/$1-${TARGET_PRODUCT}.zip
 
 # Include device specific script
 if [ -f $DEVICE_TOP/releasetools/addons.sh ]; then
@@ -86,7 +87,6 @@ rm -rf $REPACK
 echo
 
 echo "Addon package complete: $OUTFILE"
-echo
 ls -l $OUTFILE
 
 exit 0
