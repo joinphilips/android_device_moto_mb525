@@ -34,6 +34,13 @@ rm -f $REPACK/ota/boot.img
 cp -f $DEVICE_COMMON/updater-script $REPACK/ota/META-INF/com/google/android/updater-script
 cp -f $DEVICE_TOP/overclock.conf $REPACK/ota/system/bootmenu/config/overclock.conf
 
+# prebuilt boot, devtree, logo & updater-script
+if [ -n "$CM_RELEASE" ]; then
+  cat $DEVICE_TOP/releasetools/updater-script-rel >> $REPACK/ota/META-INF/com/google/android/updater-script
+  cp -f $VENDOR_TOP/../jordan/boot-222-179-4.smg $REPACK/ota/boot.img
+  cp -f $VENDOR_TOP/../jordan/devtree-222-179-2.smg $REPACK/ota/devtree.img
+fi
+
 # Opensource init binary
 cp -f $DEVICE_OUT/root/init $REPACK/ota/system/bootmenu/2nd-init/init
 
