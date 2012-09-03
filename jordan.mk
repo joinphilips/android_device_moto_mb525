@@ -31,3 +31,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.media.capture.torchIntensity=25 \
 	ro.media.capture.classification=classE
 
+## Temporary fix for audio... :/
+PRODUCT_COPY_FILES += \
+	device/moto/mb525/prebuilt/audio_policy.jordan.so:system/lib/hw/audio_policy.jordan.so
+
